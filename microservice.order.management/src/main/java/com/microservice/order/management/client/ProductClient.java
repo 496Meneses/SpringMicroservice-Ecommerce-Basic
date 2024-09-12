@@ -11,11 +11,8 @@ import java.util.List;
 
 @FeignClient(name = "microservice-product-catalog", url = "localhost:8090/api/product")
 public interface ProductClient {
-    @GetMapping("search-by-id/{id}")
-    ProductDto findProductById(@PathVariable Long id);
     @GetMapping("/search-by-id/{id}")
     ProductDto getProductById(@PathVariable Long id);
-
     @PutMapping("/reduce-stock/{id}")
     void reduceStock(@PathVariable("id") Long id, @RequestParam("quantity") Integer quantity);
     @PutMapping("/increase-stock/{id}/{quantity}")

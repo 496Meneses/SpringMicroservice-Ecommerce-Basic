@@ -46,7 +46,7 @@ public class OrderController {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
     }
-    @PatchMapping("/{orderId}/complete")
+    @PatchMapping("/complete/{orderId}")
     public ResponseEntity<Void> completeOrder(@PathVariable Long orderId) {
         try {
             orderService.completeOrder(orderId);
