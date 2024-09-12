@@ -11,4 +11,6 @@ public interface IOrderService {
     List<ProductDto> getProductsByOrderId(Long orderId);
     ResponseOrderDto getAllOrders();
     OrderDto createOrder(OrderDto orderDTO);
+    void completeOrder(Long orderId);
+    OrderDto updateOrder(OrderDto orderDTO);
 }

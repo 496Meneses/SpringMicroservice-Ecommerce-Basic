@@ -43,4 +43,8 @@ public class ProductController {
     public ResponseEntity<String> reduceStock(@PathVariable Long id, @RequestParam Integer quantity) {
         return ResponseEntity.ok(productService.reduceStock(id, quantity));
     }
+    @PutMapping("/increase-stock/{id}/{quantity}")
+    public ResponseEntity<String> increaseStock(@PathVariable Long id, @PathVariable Integer quantity) {
+        return ResponseEntity.ok(productService.increaseStock(id, quantity));
+    }
 }

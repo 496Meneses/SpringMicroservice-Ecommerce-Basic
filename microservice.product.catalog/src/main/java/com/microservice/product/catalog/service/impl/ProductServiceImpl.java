@@ -47,4 +47,16 @@ public class ProductServiceImpl implements IProductService {
         productRepository.save(entity);
         return "Stock reducido";
     }
+
+    @Override
+    public String increaseStock(Long id, Integer quantity) {
+        Optional<Product> product = productRepository.findById(id);
+        if (product.isEmpty()) {
+            return "Producto no encontrado";
+        }
+        Product entity = product.get();
+        entity.setStock(entity.getStock() + quantity);
+        productRepository.save(entity);
+        return "Stock aumentado";
+    }
 }

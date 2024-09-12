@@ -18,4 +18,6 @@ public interface ProductClient {
 
     @PutMapping("/reduce-stock/{id}")
     void reduceStock(@PathVariable("id") Long id, @RequestParam("quantity") Integer quantity);
+    @PutMapping("/increase-stock/{id}/{quantity}")
+    void increaseStock(@PathVariable("id") Long productId, @PathVariable("quantity") Integer quantity);
 }

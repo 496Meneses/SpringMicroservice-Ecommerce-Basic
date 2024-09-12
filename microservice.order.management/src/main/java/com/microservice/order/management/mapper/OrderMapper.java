@@ -13,6 +13,7 @@ public class OrderMapper {
     public static OrderDto mapToDto(Order entity) {
         return OrderDto.builder()
                 .id(entity.getId())
+                .status(entity.getStatus())
                 .totalAmount(entity.getTotalAmount())
                 .products(entity.getOrderItems().stream().map(orderItem -> mapOrderItemDtoToEntity(orderItem)).collect(Collectors.toList()))
                 .build();
@@ -20,12 +21,14 @@ public class OrderMapper {
     public static Order mapToEntity(OrderDto dto) {
         return Order.builder()
                 .id(dto.getId())
+                .status(dto.getStatus())
                 .build();
     }
     public static OrderItemDTO mapOrderItemDtoToEntity(OrderItem entity) {
         return OrderItemDTO.builder()
                 .productId(entity.getProductId())
                 .quantity(entity.getQuantity())
+
                 .build();
     }
 }

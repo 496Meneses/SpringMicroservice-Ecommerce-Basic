@@ -1,5 +1,6 @@
 package com.microservice.order.management.domain.dto;
 
+import com.microservice.order.management.domain.OrderStatus;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -17,4 +18,5 @@ public class OrderDto {
     private Long id;
     private Double totalAmount;
     private List<OrderItemDTO> products;
+    private OrderStatus status;
 }

@@ -12,4 +12,6 @@ public interface IProductService {
     ProductDto findById(Long id);
 
     String reduceStock(Long id, Integer quantity);
+
+    String increaseStock(Long id, Integer quantity);
 }
