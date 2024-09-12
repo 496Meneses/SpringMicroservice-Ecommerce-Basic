@@ -10,6 +10,14 @@ public class ProductMapper {
         return ProductDto.builder()
                 .id(entity.getId())
                 .name(entity.getName())
+                .price(entity.getPrice())
+                .stock(entity.getStock())
+                .build();
+    }
+    public static Product mapToEntity(ProductDto dto) {
+        return Product.builder()
+                .id(dto.getId())
+                .name(dto.getName())
                 .build();
     }
 }

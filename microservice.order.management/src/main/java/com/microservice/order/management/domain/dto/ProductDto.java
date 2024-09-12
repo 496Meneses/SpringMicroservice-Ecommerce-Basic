@@ -1,4 +1,4 @@
-package com.microservice.product.catalog.domain.dto;
+package com.microservice.order.management.domain.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

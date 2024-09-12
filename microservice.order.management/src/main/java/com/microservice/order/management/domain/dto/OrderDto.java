@@ -1,4 +1,4 @@
-package com.microservice.product.catalog.domain.dto;
+package com.microservice.order.management.domain.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -6,15 +6,15 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class ProductDto {
+public class OrderDto {
     private Long id;
-    private String name;
-    private String description;
-    private Double price;
-    private Integer stock;
+    private Double totalAmount;
+    private List<OrderItemDTO> products;
 }

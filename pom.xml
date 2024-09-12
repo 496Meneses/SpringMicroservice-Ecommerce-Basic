@@ -21,6 +21,7 @@
         <module>microservice-eureka</module>
         <module>microservice-config</module>
         <module>microservice.product.catalog</module>
+        <module>microservice.order.management</module>
     </modules>
 
     <properties>
